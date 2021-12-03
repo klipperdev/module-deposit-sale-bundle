@@ -12,6 +12,10 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
+        "klipper/module-device-bundle": "^2.0.0",
+        "klipper/module-partner-bundle": "^2.0.0",
+        "klipper/module-product-bundle": "^2.0.0",
+        "klipper/module-workcenter-bundle": "^2.0.0",
         "klipper/module": "^2.0.0"
     },
     "autoload": {

@@ -1,0 +1,21 @@
+# Deposit Sale module
+deposit_sale_module.name: Deposit sale module
+deposit_sale_module.name.plural: Deposit sale modules
+deposit_sale_module.fields.comment: Comment
+deposit_sale_module.fields.excluded_scope: Excluded scope
+deposit_sale_module.associations.default_original_address: Default original address
+deposit_sale_module.associations.default_status: Default status
+
+# Deposit Sale
+deposit_sale.name: Deposit sale
+deposit_sale.name.plural: Deposit sales
+deposit_sale.fields.available: Available
+deposit_sale.fields.reference: Reference
+deposit_sale.fields.description: Description
+deposit_sale.fields.commentaire: Comment
+deposit_sale.fields.receipted_at: Receipted at
+deposit_sale.associations.status: Statut
+deposit_sale.associations.original_address: Original address
+
+# Device
+device.associations.last_deposit_sale: Last deposit sale

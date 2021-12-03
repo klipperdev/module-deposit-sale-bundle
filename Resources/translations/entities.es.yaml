@@ -1,0 +1,21 @@
+# Deposit Sale module
+deposit_sale_module.name: Module de dépôt-vente
+deposit_sale_module.name.plural: Modules de dépôt-vente
+deposit_sale_module.fields.comment: Commentaire
+deposit_sale_module.fields.excluded_scope: Périmètre exclus
+deposit_sale_module.associations.default_original_address: Adresse d'origine par défaut
+deposit_sale_module.associations.default_status: Statut par défaut
+
+# Deposit Sale
+deposit_sale.name: Depósito-venta
+deposit_sale.name.plural: Depósito-ventas
+deposit_sale.fields.available: Disponible
+deposit_sale.fields.reference: Referencia
+deposit_sale.fields.description: Descripción
+deposit_sale.fields.commentaire: Comentario
+deposit_sale.fields.receipted_at: Recibido el
+deposit_sale.associations.status: Estado
+deposit_sale.associations.original_address: Direccion original
+
+# Device
+device.associations.last_deposit_sale: Último envío

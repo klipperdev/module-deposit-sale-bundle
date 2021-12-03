@@ -1,0 +1,24 @@
+deposit_sale_status:
+    -   value: waiting
+        label: Waiting for reception
+        icon: fa-fw fa-hourglass-start
+        translations:
+            fr: { label: En attente de réception }
+    -   value: received
+        label: Received
+        icon: fa-fw fa-box-open
+        color: '#40c1b8'
+        translations:
+            fr: { label: Réceptionné }
+    -   value: in_deposit_sale
+        label: In deposit sale
+        icon: fa-fw fa-warehouse
+        color: '#4bb85e'
+        translations:
+            fr: { label: En dépôt-vente }
+    -   value: sold
+        label: Sold
+        icon: fa-fw fa-file-invoice-dollar
+        color: '#149c7d'
+        translations:
+            fr: { label: Vendu }
