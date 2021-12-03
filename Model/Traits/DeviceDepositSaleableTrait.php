@@ -13,6 +13,7 @@ namespace Klipper\Module\DepositSaleBundle\Model\Traits;
 
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
+use Klipper\Module\DepositSaleBundle\Model\DepositSaleInterface;
 
 /**
  * @author François Pluchino <francois.pluchino@klipper.dev>

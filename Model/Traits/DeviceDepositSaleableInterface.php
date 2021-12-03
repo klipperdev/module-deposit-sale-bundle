@@ -11,6 +11,8 @@
 
 namespace Klipper\Module\DepositSaleBundle\Model\Traits;
 
+use Klipper\Module\DepositSaleBundle\Model\DepositSaleInterface;
+
 /**
  * @author François Pluchino <francois.pluchino@klipper.dev>
  */
