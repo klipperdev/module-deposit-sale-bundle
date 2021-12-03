@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <!-- Deposit Sale Listener -->
+        <service id="Klipper\Module\DepositSaleBundle\Doctrine\Listener\DepositSaleSubscriber">
+            <tag name="doctrine.event_subscriber" />
+            <argument type="service" id="klipper_doctrine_choice.manager"/>
+            <argument type="service" id="klipper_deposit_sale.generator.deposit_sale_reference"/>
+            <argument type="service" id="translator"/>
+            <argument type="collection"/>
+            <argument type="collection"/>
+        </service>
+
+        <service id="klipper_deposit_sale.generator.deposit_sale_reference" class="Klipper\Component\CodeGenerator\CodeGenerator">
+            <argument>8</argument>
+            <argument>8</argument>
+            <argument>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ</argument>
+        </service>
+    </services>
+</container>
