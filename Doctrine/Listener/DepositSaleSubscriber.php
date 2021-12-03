@@ -148,10 +148,17 @@ class DepositSaleSubscriber implements EventSubscriber
                     ));
                 }
 
+                $changeSet = $uow->getEntityChangeSet($object);
                 $deviceLastDepositSale = $device->getLastDepositSale();
 
-                if ($create || null === $deviceLastDepositSale) {
+                if ($create || isset($changeSet['device'])) {
                     $device->setLastDepositSale($object);
+
+                    if (null !== $changeSet['device'][0] && null !== $changeSet['device'][0]->getLastDepositSale()) {
+                        $changeSet['device'][0]->setLastDepositSale(null);
+                        $classMetadata = $em->getClassMetadata(ClassUtils::getClass($changeSet['device'][0]));
+                        $uow->recomputeSingleEntityChangeSet($classMetadata, $changeSet['device'][0]);
+                    }
 
                     $classMetadata = $em->getClassMetadata(ClassUtils::getClass($device));
                     $uow->recomputeSingleEntityChangeSet($classMetadata, $device);
