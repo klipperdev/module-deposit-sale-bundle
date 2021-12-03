@@ -22,3 +22,15 @@ deposit_sale_status:
         color: '#149c7d'
         translations:
             fr: { label: Vendu }
+
+device_status:
+    -   value: in_deposit_sale
+        label: In deposit sale
+        color: '#0ff5e2'
+        translations:
+            fr: { label: En dépôt-vente }
+    -   value: sold
+        label: Sold
+        color: '#469ff1'
+        translations:
+            fr: { label: Vendu }
