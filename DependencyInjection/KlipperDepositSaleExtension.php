@@ -11,6 +11,8 @@
 
 namespace Klipper\Module\DepositSaleBundle\DependencyInjection;
 
+use Klipper\Bundle\ApiBundle\Util\ControllerDefinitionUtil;
+use Klipper\Module\DepositSaleBundle\Controller\ApiDepositSaleAttachmentController;
 use Klipper\Module\DepositSaleBundle\Doctrine\Listener\DepositSaleSubscriber;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\Config\Loader\LoaderInterface;
@@ -34,6 +36,8 @@ class KlipperDepositSaleExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
         $this->configDepositSale($container, $loader, $config['deposit_sale']);
+
+        ControllerDefinitionUtil::set($container, ApiDepositSaleAttachmentController::class);
     }
 
     /**
