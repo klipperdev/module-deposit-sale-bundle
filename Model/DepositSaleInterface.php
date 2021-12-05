@@ -11,6 +11,7 @@
 
 namespace Klipper\Module\DepositSaleBundle\Model;
 
+use Doctrine\Common\Collections\Collection;
 use Klipper\Component\DoctrineChoice\Model\ChoiceInterface;
 use Klipper\Component\Model\Traits\CurrencyableInterface;
 use Klipper\Component\Model\Traits\IdInterface;
@@ -127,4 +128,9 @@ interface DepositSaleInterface extends
     public function setComment(?string $comment);
 
     public function getComment(): ?string;
+
+    /**
+     * @return Collection|DepositSaleAttachmentInterface[]
+     */
+    public function getAttachments(): Collection;
 }

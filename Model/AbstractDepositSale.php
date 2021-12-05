@@ -11,6 +11,8 @@
 
 namespace Klipper\Module\DepositSaleBundle\Model;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 use Klipper\Component\DoctrineChoice\Model\ChoiceInterface;
@@ -176,6 +178,16 @@ abstract class AbstractDepositSale implements DepositSaleInterface
      */
     protected ?DepositSaleInterface $previousDepositSale = null;
 
+    /**
+     * @ORM\OneToMany(
+     *     targetEntity="Klipper\Module\DepositSaleBundle\Model\DepositSaleAttachmentInterface",
+     *     fetch="EXTRA_LAZY",
+     *     mappedBy="depositSale",
+     *     orphanRemoval=true
+     * )
+     */
+    protected ?Collection $attachments = null;
+
     public function setReference(?string $reference): self
     {
         $this->reference = $reference;
@@ -320,5 +332,10 @@ abstract class AbstractDepositSale implements DepositSaleInterface
     public function getPreviousDepositSale(): ?DepositSaleInterface
     {
         return $this->previousDepositSale;
+    }
+
+    public function getAttachments(): Collection
+    {
+        return $this->attachments ?: $this->attachments = new ArrayCollection();
     }
 }
