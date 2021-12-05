@@ -17,5 +17,15 @@ deposit_sale.fields.receipted_at: Recibido el
 deposit_sale.associations.status: Estado
 deposit_sale.associations.original_address: Direccion original
 
+# Deposit Sale Attachment
+deposit_sale_attachment.name: Adjunto del Depósito-Venta
+deposit_sale_attachment.name.plural: Adjuntos del Depósito-Venta
+deposit_sale_attachment.fields.extension: Extensión
+deposit_sale_attachment.fields.type_mime: Type mime
+deposit_sale_attachment.fields.size: Tamaño
+deposit_sale_attachment.fields.width: Ancho
+deposit_sale_attachment.fields.height: Altura
+deposit_sale_attachment.fields.image: ¿Es una imagen?
+
 # Device
 device.associations.last_deposit_sale: Último envío

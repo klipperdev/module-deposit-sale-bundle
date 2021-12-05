@@ -17,5 +17,15 @@ deposit_sale.fields.receipted_at: Receipted at
 deposit_sale.associations.status: Statut
 deposit_sale.associations.original_address: Original address
 
+# Deposit Sale Attachment
+deposit_sale_attachment.name: Attachment of Deposit Sale
+deposit_sale_attachment.name.plural: Attachments of Deposit Sale
+deposit_sale_attachment.fields.extension: Extension
+deposit_sale_attachment.fields.type_mime: Type mime
+deposit_sale_attachment.fields.size: Size
+deposit_sale_attachment.fields.width: Width
+deposit_sale_attachment.fields.height: Height
+deposit_sale_attachment.fields.image: Is an image?
+
 # Device
 device.associations.last_deposit_sale: Last deposit sale

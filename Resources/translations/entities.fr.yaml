@@ -17,5 +17,15 @@ deposit_sale.fields.receipted_at: Reçu le
 deposit_sale.associations.status: Statut
 deposit_sale.associations.original_address: Adresse d'origine
 
+# Deposit Sale Attachment
+deposit_sale_attachment.name: Pièce-jointe du Dépôt-vente
+deposit_sale_attachment.name.plural: Pièce-jointes du Dépôt-vente
+deposit_sale_attachment.fields.extension: Extension
+deposit_sale_attachment.fields.type_mime: Type mime
+deposit_sale_attachment.fields.size: Taille
+deposit_sale_attachment.fields.width: Largeur
+deposit_sale_attachment.fields.height: Hauteur
+deposit_sale_attachment.fields.image: Est une image ?
+
 # Device
 device.associations.last_deposit_sale: Dernier dépôt-vente
